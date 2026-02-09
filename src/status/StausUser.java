@@ -8,25 +8,31 @@ package status;
 /**
  * MidTerm-Exam
  * @author srinivsi
+ * @MODIFIED BY Juan Munoz February 9, 2026
  */
 public class StausUser 
 {
-   public void statusDetail(String code)
+   public void statusDetail(StatusCode code)
 {
-switch(code.toUpperCase())
+switch(code)
         {
-        case "ZERO": System.out.println("REJECTED");
+        case ZERO: 
+            System.out.println(ResultCode.REJECTED);
         break;
-        case "ONE": System.out.println("PENDING");
+        case ONE: 
+            System.out.println(ResultCode.PENDING);
         break;
-        case "TWO":
-        System.out.println("PROCESSING");
+        case TWO:
+            System.out.println(ResultCode.PROCESSING);
         break;
-        case "THREE": 
-            System.out.println("APPROVED");
+        case THREE: 
+            System.out.println(ResultCode.APPROVED);
+        break;
+        case FOUR: 
+            System.out.println(ResultCode.COMPLETED);
         break;
         default:
-         System.out.println("NOT VALID CODE");
+            System.out.println(ResultCode.IN_VALID_CODE);
         break;
         }
 }
